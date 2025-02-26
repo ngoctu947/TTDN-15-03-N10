@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem
+            id="menu_root"
+            name="QLPH"
+            sequence="0"/>
+          
+        <menuitem name="Quản lý phòng họp" 
+            id="menu_quan_ly_phong_hop" 
+            parent="menu_root" 
+            sequence="1"
+            action="action_quan_ly_phong_hop"
+        />
+    </data>
+</odoo>
