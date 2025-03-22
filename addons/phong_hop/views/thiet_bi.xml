@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_thiet_bi_form" model="ir.ui.view">
+            <field name="name">thiet_bi</field>
+            <field name="model">thiet_bi</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Thiết Bị</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="ma_thiet_bi" string="Mã Thiết Bị" required="1"/>
+                            <field name="ten_thiet_bi" string="Tên Thiết Bị" required="1"/>
+                            <field name="trang_thai" string="Trạng Thái"/>
+                            <field name="phong_id" string="Phòng Họp"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_activate_device" type="object" string="Kích Hoạt" class="btn-primary"/>
+                        <button name="action_deactivate_device" type="object" string="Ngừng Hoạt Động" class="btn-danger"/>
+                        <button name="action_send_for_maintenance" type="object" string="Bảo Trì" class="btn-secondary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_thiet_bi_tree" model="ir.ui.view">
+            <field name="name">thiet_bi</field>
+            <field name="model">thiet_bi</field>
+            <field name="arch" type="xml">
+                <tree>
+                 <field name="ma_thiet_bi" string="Mã Thiết Bị" required="1"/>
+                            <field name="ten_thiet_bi" string="Tên Thiết Bị" required="1"/>
+                            <field name="trang_thai" string="Trạng Thái"/>
+                            <field name="phong_id" string="Phòng Họp"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="thiet_bi_search">
+            <field name="model">thiet_bi</field>
+            <field name="arch" type="xml">
+                <search>
+                            <field name="ma_thiet_bi" string="Mã Thiết Bị" required="1"/>
+                            <field name="ten_thiet_bi" string="Tên Thiết Bị" required="1"/>
+                            <field name="trang_thai" string="Trạng Thái"/>
+                            <field name="phong_id" string="Phòng Họp"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_thiet_bi" model="ir.actions.act_window">
+            <field name="name">Thiết bị</field>
+            <field name="res_model">thiet_bi</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "thiet_bi_search"/>
+        </record>
+    </data>
+</odoo>
+        
+    

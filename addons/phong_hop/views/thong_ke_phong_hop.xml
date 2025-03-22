@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_thong_ke_phong_hop_form" model="ir.ui.view">
+            <field name="name">thong_ke_phong_hop</field>
+            <field name="model">thong_ke_phong_hop</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Thống Kê Phòng Họp</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="phong_hop_id" string="Phòng Họp" required="1"/>
+                            <field name="so_nguoi_tham_du" string="Số Người Tham Dự"/>
+                            <field name="so_su_co_thiet_bi" string="Số Sự Cố Thiết Bị"/>
+                            <field name="so_cuoc_hop_bi_huy" string="Số Cuộc Họp Bị Hủy"/>
+                            <field name="tong_so_cuoc_hop" string="Tổng Số Cuộc Họp" readonly="1"/>
+                            <field name="ty_le_su_dung" string="Tỷ Lệ Sử Dụng (%)" readonly="1"/>
+                            <field name="nguoi_dat_nhieu_nhat" string="Người Đặt Nhiều Nhất"/>
+                            <field name="ngay_thong_ke" string="Ngày Thống Kê" required="1"/>
+                            <field name="thoi_luong_trung_binh" string="Thời Lượng Trung Bình" readonly="1"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_update_statistics" type="object" string="Cập Nhật Thống Kê" class="btn-primary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_thong_ke_phong_hop_tree" model="ir.ui.view">
+            <field name="name">thong_ke_phong_hop</field>
+            <field name="model">thong_ke_phong_hop</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="phong_hop_id" string="Phòng Họp"/>
+                    <field name="so_nguoi_tham_du" string="Số Người Tham Dự"/>
+                    <field name="so_su_co_thiet_bi" string="Số Sự Cố Thiết Bị"/>
+                    <field name="so_cuoc_hop_bi_huy" string="Số Cuộc Họp Bị Hủy"/>
+                    <field name="tong_so_cuoc_hop" string="Tổng Số Cuộc Họp"/>
+                    <field name="ty_le_su_dung" string="Tỷ Lệ Sử Dụng (%)"/>
+                    <field name="nguoi_dat_nhieu_nhat" string="Người Đặt Nhiều Nhất"/>
+                    <field name="ngay_thong_ke" string="Ngày Thống Kê"/>
+                    <field name="thoi_luong_trung_binh" string="Thời Lượng Trung Bình"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="thong_ke_phong_hop_search">
+            <field name="model">thong_ke_phong_hop</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="phong_hop_id" string="Phòng Họp"/>
+                    <field name="so_nguoi_tham_du" string="Số Người Tham Dự"/>
+                    <field name="so_su_co_thiet_bi" string="Số Sự Cố Thiết Bị"/>
+                    <field name="so_cuoc_hop_bi_huy" string="Số Cuộc Họp Bị Hủy"/>
+                    <field name="tong_so_cuoc_hop" string="Tổng Số Cuộc Họp"/>
+                    <field name="ty_le_su_dung" string="Tỷ Lệ Sử Dụng (%)"/>
+                    <field name="nguoi_dat_nhieu_nhat" string="Người Đặt Nhiều Nhất"/>
+                    <field name="ngay_thong_ke" string="Ngày Thống Kê"/>
+                    <field name="thoi_luong_trung_binh" string="Thời Lượng Trung Bình"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_thong_ke_phong_hop" model="ir.actions.act_window">
+            <field name="name">Thống kê phòng họp</field>
+            <field name="res_model">thong_ke_phong_hop</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "thong_ke_phong_hop_search"/>
+        </record>
+    </data>
+</odoo>
+        
+    

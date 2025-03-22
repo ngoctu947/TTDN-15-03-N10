@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "quan_ly_phong_hop",
+    'name': "phong_hop",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -25,7 +25,12 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/quan_ly_phong_hop.xml',
+        'views/phong_hop.xml',
+        'views/thiet_bi.xml',
+        'views/don_muon_phong.xml',
+        'views/lich_su_su_dung_phong.xml',
+        'views/thong_ke_phong_hop.xml',
+        'views/tien_ich.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

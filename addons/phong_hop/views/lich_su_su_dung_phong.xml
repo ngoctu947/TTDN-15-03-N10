@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_lich_su_su_dung_phong_form" model="ir.ui.view">
+            <field name="name">lich_su_su_dung_phong</field>
+            <field name="model">lich_su_su_dung_phong</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Lịch sử sử dụng phòng</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="cuoc_hop_id" string="Cuộc Họp" required="1"/>
+                            <field name="chu_de" string="Chủ Đề" required="1"/>
+                            <field name="gio_bat_dau" string="Giờ Bắt Đầu" required="1"/>
+                            <field name="gio_ket_thuc" string="Giờ Kết Thúc" required="1"/>
+                            <field name="ghi_chu" string="Ghi Chú"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_add_meeting_history" type="object" string="Thêm" class="btn-primary"/>
+                        <button name="action_update_meeting_history" type="object" string="Cập Nhật" class="btn-secondary"/>
+                        <button name="action_delete_meeting_history" type="object" string="Xóa" class="btn-danger"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_lich_su_su_dung_phong_tree" model="ir.ui.view">
+            <field name="name">lich_su_su_dung_phong</field>
+            <field name="model">lich_su_su_dung_phong</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="cuoc_hop_id" string="Cuộc Họp" required="1"/>
+                    <field name="chu_de" string="Chủ Đề" required="1"/>
+                    <field name="gio_bat_dau" string="Giờ Bắt Đầu" required="1"/>
+                    <field name="gio_ket_thuc" string="Giờ Kết Thúc" required="1"/>
+                    <field name="ghi_chu" string="Ghi Chú"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="lich_su_su_dung_phong_search">
+            <field name="model">lich_su_su_dung_phong</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="cuoc_hop_id" string="Cuộc Họp" required="1"/>
+                    <field name="chu_de" string="Chủ Đề" required="1"/>
+                    <field name="gio_bat_dau" string="Giờ Bắt Đầu" required="1"/>
+                    <field name="gio_ket_thuc" string="Giờ Kết Thúc" required="1"/>
+                    <field name="ghi_chu" string="Ghi Chú"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_lich_su_su_dung_phong" model="ir.actions.act_window">
+            <field name="name">Lịch sử sử dụng phòng</field>
+            <field name="res_model">lich_su_su_dung_phong</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "lich_su_su_dung_phong_search"/>
+        </record>
+    </data>
+</odoo>
+        
+    

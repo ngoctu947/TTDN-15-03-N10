@@ -46,14 +46,7 @@
                     <field name="ngay_sinh"/>
                     <field name="que_quan"/>
                     <field name="email"/>
-                    <searchpanel>
-                    <field name="ma_dinh_danh" select="multi"/>
-                    <field name="ho_va_ten" select="multi"/>
-                    <field name="phong_ban" select="multi"/>
-                    <field name="ngay_sinh" select="multi"/>
-                    <field name="que_quan" select="multi"/>
-                    <field name="email" select="multi"/>
-                    </searchpanel>
+    
                 </search>
             </field>
         </record>

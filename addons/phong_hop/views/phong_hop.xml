@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_phong_hop_form" model="ir.ui.view">
+            <field name="name">phong_hop</field>
+            <field name="model">phong_hop</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Phòng họp</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="name" string="Tên Phòng" required="1"/>
+                            <field name="suc_chua" string="Sức Chứa" required="1"/>
+                            <field name="mo_ta" string="Mô Tả"/>
+                            <field name="thiet_bi_ids" widget="many2many_tags" string="Thiết Bị"/>
+                            <field name="trang_thai" string="Trạng Thái"/>
+                            <field name="hinh_anh" string="Hình Ảnh" widget="image"/> 
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_activate_room" type="object" string="Kích Hoạt" class="btn-primary"/>
+                        <button name="action_deactivate_room" type="object" string="Ngừng Hoạt Động" class="btn-danger"/>
+                        <button name="action_add_device" type="object" string="Thêm Thiết Bị" class="btn-secondary"/>
+                        <button name="action_remove_device" type="object" string="Xóa Thiết Bị" class="btn-secondary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_phong_hop_tree" model="ir.ui.view">
+            <field name="name">phong_hop</field>
+            <field name="model">phong_hop</field>
+            <field name="arch" type="xml">
+                <tree>
+                <field name="name" string="Tên Phòng" required="1"/>
+                <field name="suc_chua" string="Sức Chứa" required="1"/>
+                <field name="mo_ta" string="Mô Tả"/>
+                <field name="thiet_bi_ids" widget="many2many_tags" string="Thiết Bị"/>
+                <field name="trang_thai" string="Trạng Thái"/>
+                <field name="hinh_anh" string="Hình Ảnh" widget="image"/> 
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="phong_hop_search">
+            <field name="model">phong_hop</field>
+            <field name="arch" type="xml">
+                <search>
+                        <field name="name" string="Tên Phòng" required="1"/>
+                            <field name="suc_chua" string="Sức Chứa" required="1"/>
+                            <field name="mo_ta" string="Mô Tả"/>
+                            <field name="thiet_bi_ids" widget="many2many_tags" string="Thiết Bị"/>
+                            <field name="trang_thai" string="Trạng Thái"/>
+                            <field name="hinh_anh" string="Hình Ảnh" widget="image"/>     
+    
+                </search>
+            </field>
+        </record>
+
+        <record id="action_phong_hop" model="ir.actions.act_window">
+            <field name="name">Phòng họp</field>
+            <field name="res_model">phong_hop</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "phong_hop_search"/>
+        </record>
+    </data>
+</odoo>
+        
+    

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem
+            id="menu_root"
+            name="QLPH"
+            sequence="0"/>
+          
+        <menuitem name="Phòng họp" 
+            id="menu_phong_hop" 
+            parent="menu_root" 
+            sequence="1"
+            action="action_phong_hop"/>
+
+        <menuitem name="Thiết bị" 
+            id="menu_thiet_bi" 
+            parent="menu_root" 
+            sequence="1"
+            action="action_thiet_bi"/>
+
+        <menuitem name="Đơn mượn phòng" 
+            id="menu_don_muon_phong" 
+            parent="menu_root" 
+            sequence="2"
+            action="action_don_muon_phong"/>
+
+        <menuitem name="Lịch sử sử dụng phòng" 
+            id="menu_lich_su_su_dung_phong" 
+            parent="menu_root" 
+            sequence="2"
+            action="action_lich_su_su_dung_phong"/>
+
+        <menuitem name="Thống kê phòng họp" 
+            id="menu_thong_ke_phong_hop" 
+            parent="menu_root" 
+            sequence="2"
+            action="action_thong_ke_phong_hop"/>
+
+        <menuitem name="Tiện ích" 
+            id="menu_tien_ich" 
+            parent="menu_root" 
+            sequence="2"
+            action="action_tien_ich"/>
+    </data>
+</odoo>
